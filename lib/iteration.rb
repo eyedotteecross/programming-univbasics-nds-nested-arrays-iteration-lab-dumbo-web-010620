@@ -1,37 +1,50 @@
-def join_ingredients(src)
-  row_index = 0
-  food_prefs = []
-    while row_index < src.count do 
-    food_prefs <<
-    "I love #{src[row_index][0]} and #{src[row_index][1]} on my pizza"
-    row_index += 1
+def join_ingredients (array)
+i = 0 
+favs_outer = []
+  while i < array.size #parameter array  
+  j = 0
+  favs_inner = []
+    while j < array[i].size
+    favs_inner << array[i][j]
+    j += 1
     end
-  food_prefs
-end
+  favs_outer << "I love #{favs_inner[0]} and #{favs_inner[1]} on my pizza"  
+  i += 1
+  end 
+favs_outer
+end 
 
-def find_greater_pair(src)
-  row_index = 0 
-  greaters = []
-    while row_index < src.count do 
-      if src[row_index][0] > src[row_index][1]  
-      greaters << src[row_index][0] 
-      else 
-      greaters << src[row_index][1] 
-      end
-      row_index += 1 
-    end 
-  greaters
-end
-
-def total_even_pairs(src)
-  row_index = 0
-  evens_sum = 0
-    while row_index < src.count do
-      if  src[row_index][0].modulo(2) && 
-          src[row_index][1].modulo(2) == 0 
-          evens_sum += src[row_index][0] + src[row_index][1]
+def find_greater_pair (array)
+i = 0 
+greater_outer = []
+  while i < array.size 
+  j = 1
+  greater_inner = array[i][0]
+    while j < array[i].size  
+      if greater_inner > array[i][j]  
+      greater_outer << greater_inner
+      else
+      greater_outer << array[i][j]  
       end   
-    row_index += 1
+    j += 1 
     end
-  evens_sum
+  i += 1
+  end
+greater_outer
 end
+
+def total_even_pairs (array)
+i = 0
+total = 0   
+  while i < array.size 
+  j = 0
+    if array[i][j] % 2 == 0 
+    j += 1
+    end 
+  i += 1
+  end 
+end 
+
+
+
+
