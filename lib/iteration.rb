@@ -51,7 +51,7 @@ total = 0
       inner_total = 0 
       j = array[i].size
       end
-    total << inner_total 
+    total += inner_total 
    
     end 
   i += 1
