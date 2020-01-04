@@ -46,7 +46,6 @@ total = 0
       if element % 2 == 0  #is element even ? 
       inner_total += element
       j += 1
-      binding.pry
       else
       inner_total = 0 
       j = array[i].size
