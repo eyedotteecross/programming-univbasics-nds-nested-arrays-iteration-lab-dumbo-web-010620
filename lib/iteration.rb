@@ -39,10 +39,14 @@ total = 0
   while i < array.size 
   j = 0
   inner_total = 0
-    while j < array[i][j].size 
-      if array[i][j] % 2 == 0  #is element even ? 
-      inner_total += array[i][j]
+    while j < array[i].size
+      element = array[i][j]
+      if element % 2 == 0  #is element even ? 
+      inner_total += element
       j += 1
+      else
+      inner_total = 0 
+      j = array[i].size
       end
     end 
   total << inner_total  
