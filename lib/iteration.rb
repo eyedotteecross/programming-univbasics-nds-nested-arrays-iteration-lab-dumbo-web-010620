@@ -54,6 +54,7 @@ total = 0
     total += inner_total 
    
     end 
+  j = 0   
   i += 1
   end 
 total   
