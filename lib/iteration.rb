@@ -48,8 +48,8 @@ total = 0
       inner_total = 0 
       j = array[i].size
       end
+    total << inner_total  
     end 
-  total << inner_total  
   i += 1
   end 
 total   
