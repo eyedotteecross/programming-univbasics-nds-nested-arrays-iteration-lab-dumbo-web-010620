@@ -38,11 +38,17 @@ i = 0
 total = 0   
   while i < array.size 
   j = 0
-    if array[i][j] % 2 == 0 
-    j += 1
+  inner_total = 0
+    while j < array[i][j].size 
+      if array[i][j] % 2 == 0  #is element even ? 
+      inner_total += array[i][j]
+      j += 1
+      end
     end 
+  total << inner_total  
   i += 1
   end 
+total   
 end 
 
 
