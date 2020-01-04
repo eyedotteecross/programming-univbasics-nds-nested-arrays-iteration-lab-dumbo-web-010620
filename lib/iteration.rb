@@ -1,3 +1,5 @@
+require 'pry'
+
 def join_ingredients (array)
 i = 0 
 favs_outer = []
@@ -48,7 +50,8 @@ total = 0
       inner_total = 0 
       j = array[i].size
       end
-    total << inner_total  
+    total << inner_total 
+    binding.pry
     end 
   i += 1
   end 
